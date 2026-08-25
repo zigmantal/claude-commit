@@ -783,7 +783,8 @@ export function activate(context: vscode.ExtensionContext) {
                     }));
                     
                     const selected = await vscode.window.showQuickPick(repoItems, {
-                        placeHolder: 'Select repository'
+                        placeHolder: 'Select repository',
+                        ignoreFocusOut: true
                     });
                     
                     if (!selected) {
